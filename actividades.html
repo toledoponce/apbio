@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#004d66",
+                        "inverse-surface": "#1e333c",
+                        "surface-container": "#dbf1fe",
+                        "secondary-container": "#85f1ed",
+                        "tertiary-fixed": "#dae5e5",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#e6f6ff",
+                        "surface-dim": "#c7dde9",
+                        "primary-container": "#1a5f7a",
+                        "surface-container-high": "#d5ecf8",
+                        "error-container": "#ffdad6",
+                        "background": "#f3faff",
+                        "primary-fixed-dim": "#92cfee",
+                        "surface-bright": "#f3faff",
+                        "outline-variant": "#c0c8cd",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#001e2b",
+                        "outline": "#70787d",
+                        "tertiary": "#384343",
+                        "inverse-on-surface": "#dff4ff",
+                        "on-background": "#071e27",
+                        "on-error": "#ffffff",
+                        "on-surface": "#071e27",
+                        "inverse-primary": "#92cfee",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#bec9c9",
+                        "on-tertiary-fixed-variant": "#3e4949",
+                        "on-secondary-fixed": "#00201f",
+                        "surface": "#f3faff",
+                        "on-surface-variant": "#40484d",
+                        "on-tertiary-fixed": "#131d1e",
+                        "on-secondary-container": "#006e6c",
+                        "surface-variant": "#cfe6f2",
+                        "surface-tint": "#236580",
+                        "on-secondary-fixed-variant": "#00504e",
+                        "primary-fixed": "#c0e8ff",
+                        "secondary": "#006a68",
+                        "primary": "#00475e",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#9bd7f7",
+                        "tertiary-container": "#505a5a",
+                        "surface-container-highest": "#cfe6f2",
+                        "secondary-fixed": "#88f4f0",
+                        "secondary-fixed-dim": "#6ad8d4",
+                        "on-tertiary-container": "#c6d1d1",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+        }
+        .clinical-gradient {
+            background: linear-gradient(135deg, #00475e 0%, #1a5f7a 100%);
+        }
+        .inner-glow {
+            box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary-container">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/60 backdrop-blur-xl shadow-sm">
+<div class="grid grid-cols-3 items-center px-8 py-4 max-w-full mx-auto">
+<div class=""><a class="flex items-center gap-3 group" href="#">
+<img alt="APBIO Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujJ3z_wkeZ0C-tHPr0031kuG5BRX8sdGMF5BztkSaxV6XwEYblv7K3ASHl2mH96Qw2BV5IZhuHFpYvKCukc1FplCaloKEc6WWbb0_YXCVC9sZe1Wh9t3khM8bsq7nH1OGl9qLol6MKmjPS62Dmnf0XPoaw11mJNr7JcFl_Ee5z0HALczLOACwka3Y5rcl1nP9RMFKA5yLsvHTY1KGJsU_OFnceEUk7Hj5J8LW1B-TgSHGarNoRFX25TvZO2GZFvSTeIBiXhdxRVZE8"/>
+<div class="flex flex-col justify-center leading-tight" style="font-family: 'Calibri', 'Inter', sans-serif; color: #268397;">
+<span class="text-sm whitespace-nowrap">Asociación Peruana</span>
+<span class="text-sm whitespace-nowrap">de Bioingeniería</span>
+</div>
+</a></div>
+<div class="hidden md:flex items-center justify-center gap-8 font-headline font-semibold tracking-tight text-sm">
+<a class="text-slate-600 hover:text-teal-900 transition-colors" href="#">Institucional</a>
+<a class="text-teal-600 border-b-2 border-teal-600 pb-1" href="#">Actividades</a>
+<a class="text-slate-600 hover:text-teal-900 transition-colors" href="#">I+D</a>
+<a class="text-slate-600 hover:text-teal-900 transition-colors" href="#">Membresía</a>
+<a class="text-slate-600 hover:text-teal-900 transition-colors" href="#">Contacto</a>
+</div>
+<div></div>
+</div>
+</nav>
+<main class="pt-24 pb-20">
+<!-- Hero Section -->
+<section class="px-8 mb-16">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 items-end">
+<div class="w-full md:w-3/5">
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-6 inline-block">Educación Continua</span>
+<h1 class="text-6xl md:text-7xl font-headline font-extrabold tracking-tighter text-primary mb-6 leading-none">
+                        Impulsando la Precisión en <span class="text-secondary">Bioingeniería</span>.
+                    </h1>
+<p class="text-lg text-on-surface-variant max-w-xl leading-relaxed">
+                        Acceda a nuestro ecosistema curado de capacitación clínica, talleres científicos y congresos internacionales diseñados para la élite de la bioingeniería peruana.
+                    </p>
+</div>
+<div class="w-full md:w-2/5 pb-2">
+<div class="glass-panel border-l-4 border-secondary p-6 rounded-xl inner-glow">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">bolt</span>
+<span class="font-headline font-bold text-primary">En Vivo Ahora</span>
+</div>
+<p class="text-sm font-medium text-on-surface">Simposio Internacional de Ingeniería de Tejidos y Bioimpresión 3D.</p>
+<a class="text-xs text-secondary font-bold mt-4 inline-flex items-center gap-1 group" href="#">
+                            UNIRSE A LA SESIÓN <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Dynamic Calendar: Bento Grid Layout -->
+<section class="px-8 mb-24">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-center mb-10">
+<h2 class="text-3xl font-headline font-bold tracking-tight text-primary">Calendario de Eventos 2024</h2>
+<div class="flex gap-2">
+<button class="p-2 rounded-md bg-surface-container-high text-primary hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+<button class="p-2 rounded-md bg-surface-container-low text-outline">
+<span class="material-symbols-outlined">calendar_today</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Featured Event -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-xl h-[500px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="professional bioengineering congress hall with medical researchers attending a high-tech presentation in a clean clinical environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_gSkWzOkWPQnopCMrTYE6l2fbeVcPwM9twnVZ2TY6yysXV2e5VXdQGv30E6FOE21Pp1sy09Azd7YYNFYbwlUcI3Wp8pjDDcuVVr75MDI-CsqYIhLmOGaIEGvfEcaH_D5fAYo_0_cnyDSLawqfIT1-iTGX-lIwO4iET_0X272p4gs4kk1jzkHxEDZ48LjJcdnRP4Owd1qvEhuetH9VFdRX0ePEnACwjEGCYygOSgHmOs2KVK1aF5d62tdgKl-KuzZjH5OGrm2bda3C"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent p-10 flex flex-col justify-end">
+<div class="flex gap-3 mb-4">
+<span class="bg-secondary text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-widest">Congreso</span>
+<span class="bg-white/20 backdrop-blur-md text-white px-3 py-1 rounded text-xs font-bold uppercase tracking-widest">Internacional</span>
+</div>
+<h3 class="text-4xl font-headline font-extrabold text-white mb-4 leading-tight">Congreso Nacional de <br/>Bioingeniería APBIO 2024</h3>
+<div class="flex items-center gap-6 text-white/80 font-medium">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span> Lima, PE</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">schedule</span> Nov 12-15</span>
+</div>
+</div>
+</div>
+<!-- Side Cards Stack -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<div class="flex-1 bg-surface-container-low p-6 rounded-xl border-l-4 border-primary transition-all hover:bg-surface-container">
+<span class="text-xs font-bold text-secondary-fixed-dim uppercase tracking-widest mb-2 block">Taller</span>
+<h4 class="font-headline font-bold text-primary text-xl mb-4 leading-tight">Procesamiento Avanzado de Señales para Neuroprótesis</h4>
+<div class="flex items-center gap-4 text-on-surface-variant text-sm">
+<span class="flex items-center gap-1 font-semibold text-primary">OCT 24</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Espacio Virtual</span>
+</div>
+<button class="mt-6 text-xs font-black text-primary flex items-center gap-2">DETALLES <span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+<div class="flex-1 bg-surface-container-highest p-6 rounded-xl transition-all hover:shadow-lg hover:shadow-primary/5">
+<span class="text-xs font-bold text-primary-container uppercase tracking-widest mb-2 block">Charla Mensual</span>
+<h4 class="font-headline font-bold text-primary text-xl mb-4 leading-tight">La Ética de CRISPR en la Investigación Sudamericana</h4>
+<div class="flex items-center gap-4 text-on-surface-variant text-sm">
+<span class="flex items-center gap-1 font-semibold text-primary">SEP 30</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Auditorio A</span>
+</div>
+<button class="mt-6 text-xs font-black text-primary flex items-center gap-2">DETALLES <span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Otros eventos Section -->
+<section class="px-8 py-24 bg-surface-container-low/30">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-baseline gap-6 mb-16">
+<div>
+<h2 class="text-4xl font-headline font-extrabold text-primary tracking-tight mb-4">Otros eventos</h2>
+<p class="text-on-surface-variant max-w-xl">Información de eventos desarrollados por otras organizaciones legadas a la ingeniería biomédica a nivel nacional e internacional.</p>
+</div>
+<div class="flex bg-surface-container-low p-1 rounded-lg">
+<button class="px-6 py-2 rounded-md bg-white text-primary font-bold text-sm shadow-sm">Todos</button>
+<button class="px-6 py-2 rounded-md text-on-surface-variant font-bold text-sm">Nacionales</button>
+<button class="px-6 py-2 rounded-md text-on-surface-variant font-bold text-sm">Internacionales</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Event Card 1 -->
+<div class="group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-slate-100">
+<div class="aspect-[16/10] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90" data-alt="historical medical diagram of a heart valve" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBacHfVn0FZLJxHxPIAUcHiLn4CsYbWsDVmb0mv38Ij291oKpDT_W_MlYKakjkLLiB_l8WUkWhdIJRutt_oRsWlPN8Db-HQm0qTtE_8RbNseRVRmP5ANg9aN_WK9nu_VKeHTdMxjqOfHLdeU2ZV8uWB0C5ArW4h5PlculcTLGsWeDEIeW-DGlhwTtQ0gQLchRKYLmhY-peUL54P94KrdVar7zeArXT79jlFzADLfpeJ1x6guC97LBRTuF8GECCSs7P56uPJgdSNTuAt"/>
+<div class="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors"></div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                                Científico
+                            </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-[10px] font-black tracking-widest text-secondary uppercase mb-2 block">Nov 2023</span>
+<h5 class="font-headline font-bold text-primary text-lg mb-2 group-hover:text-secondary transition-colors">Biomateriales en Implantes Cardíacos</h5>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-6">Estudio de cinco años en cooperación con hospitales líderes de la región.</p>
+<div class="mt-auto flex items-center justify-between pt-4 border-t border-slate-50">
+<span class="text-[10px] font-bold text-slate-400">PDF DISPONIBLE</span>
+<span class="material-symbols-outlined text-primary text-lg">download</span>
+</div>
+</div>
+</div>
+<!-- Event Card 2 -->
+<div class="group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-slate-100">
+<div class="aspect-[16/10] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="scientists in lab coats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMj0l_RlQ7NY4k8-aXPRkp8ZezmtdAWU47f4K5opM_LKEVhqpRys_sOA3dp0eaAYLgge6mJLCBSj0fRnqLC0amIpiTAJ9r1uBDJulRnKVcEhZV3m4z-HofrM5rZIypkZzZ13hOMQzMFSudhk3eHEHV1dbc4Wg1YWIAJIZ3af-SFxMa8ptC9IiYlrZgapjjA_QKNKqEhIzhL-T6ozGRtYxL6nuySfj7VHfO6Kd6Htpewy_vLgHRvY0-w9zhGv96khOIUzpZch4uE5IJ"/>
+<div class="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors"></div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                                Institucional
+                            </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-[10px] font-black tracking-widest text-secondary uppercase mb-2 block">Ago 2022</span>
+<h5 class="font-headline font-bold text-primary text-lg mb-2 group-hover:text-secondary transition-colors">I Congreso Iberoamericano de Biomecánica</h5>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-6">Encuentro histórico con más de 400 investigadores de toda Latinoamérica.</p>
+<div class="mt-auto flex items-center justify-between pt-4 border-t border-slate-50">
+<span class="text-[10px] font-bold text-slate-400">VER GALERÍA</span>
+<span class="material-symbols-outlined text-primary text-lg">gallery_thumbnail</span>
+</div>
+</div>
+</div>
+<!-- Event Card 3 -->
+<div class="group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-slate-100">
+<div class="aspect-[16/10] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 opacity-90" data-alt="microchip and nerve cells" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkwMWctLMSGESgfG28VB8p4RTmQ4xr7L-VkzkYVO9nrw0PaCEAFnZmYvWzSHnMasl1LE1SrWo7BPzmxqXc6Gj_C5dH0PKDk1l085PT4bShIxBRDK4vujsymu09jGH7cJ7wYxVz_pvZ8nJfLtbJ79f6ch3uFY7nCf1ms5oW6GTanlj9gL8pVlon8fgCP7Qvmv2igkeYemT97f3ElqDlfVDsmh820jpQZxv6CB8rAqo5bKv5JvASYQcSkjT_WfMCIRp5NKlPqPzP9Pa7"/>
+<div class="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors"></div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                                Normativa
+                            </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-[10px] font-black tracking-widest text-secondary uppercase mb-2 block">Jul 2024</span>
+<h5 class="font-headline font-bold text-primary text-lg mb-2 group-hover:text-secondary transition-colors">Actualización Carta Ética APBIO v2.4</h5>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-6">Nuevas directrices fundamentales para la práctica bioingenieril en Perú.</p>
+<div class="mt-auto flex items-center justify-between pt-4 border-t border-slate-50">
+<span class="text-[10px] font-bold text-slate-400">LEER MÁS</span>
+<span class="material-symbols-outlined text-primary text-lg">article</span>
+</div>
+</div>
+</div>
+<!-- Event Card 4 -->
+<div class="group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col h-full border border-slate-100">
+<div class="aspect-[16/10] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="medical research campus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_M0sI3YijXSlCDtXlEMlOs0PxMWsd3V27dIgpBFvZQAoQJRaU3pWxGiSxpIw2FMdYkKehOFV-wuRDZnrrLlYpCEdmYVVMzrX11HE3IvhSMUW6ZtFQ3VNGkbHpBdxH-dimrx7cSMMUTMikdAdo64vpgKxOmbRduHx4kmkd2W1-wkBMZ3Ydr860HCV3xYGIF3NxEZuHXWvr5BvsC-T4KwFQju-kCYk1U2sy-nOR6KajupfGnsCxFt7D_xfkh6MoEEG_mVnBf0BkXErB"/>
+<div class="absolute inset-0 bg-primary/5 group-hover:bg-transparent transition-colors"></div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-primary px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                                Regional
+                            </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<span class="text-[10px] font-black tracking-widest text-secondary uppercase mb-2 block">Jun 2024</span>
+<h5 class="font-headline font-bold text-primary text-lg mb-2 group-hover:text-secondary transition-colors">Centro Regional de I+D Arequipa</h5>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-6">Inauguración y primeros hitos técnicos de la nueva sede regional.</p>
+<div class="mt-auto flex items-center justify-between pt-4 border-t border-slate-50">
+<span class="text-[10px] font-bold text-slate-400">INFO SEDE</span>
+<span class="material-symbols-outlined text-primary text-lg">location_city</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 bg-slate-100">
+<div class="flex flex-row justify-between items-center px-12 py-8 gap-4">
+<div class="text-lg font-black text-teal-950 font-headline">APBIO</div>
+<div class="flex flex-wrap justify-center gap-6 font-headline text-xs uppercase tracking-widest">
+<a class="text-slate-500 hover:text-teal-600 transition-all" href="#">Política de Privacidad</a>
+<a class="text-slate-500 hover:text-teal-600 transition-all" href="#">Términos de Servicio</a>
+</div>
+<div class="text-slate-500 text-[10px] uppercase tracking-widest text-right">
+                © 2024 Asociación Peruana de Bioingeniería. Todos los derechos reservados.
+            </div>
+</div>
+</footer>
+</body></html>

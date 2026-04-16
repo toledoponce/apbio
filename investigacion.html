@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#004d66",
+                        "inverse-surface": "#1e333c",
+                        "surface-container": "#dbf1fe",
+                        "secondary-container": "#85f1ed",
+                        "tertiary-fixed": "#dae5e5",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#e6f6ff",
+                        "surface-dim": "#c7dde9",
+                        "primary-container": "#1a5f7a",
+                        "surface-container-high": "#d5ecf8",
+                        "error-container": "#ffdad6",
+                        "background": "#f3faff",
+                        "primary-fixed-dim": "#92cfee",
+                        "surface-bright": "#f3faff",
+                        "outline-variant": "#c0c8cd",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed": "#001e2b",
+                        "outline": "#70787d",
+                        "tertiary": "#384343",
+                        "inverse-on-surface": "#dff4ff",
+                        "on-background": "#071e27",
+                        "on-error": "#ffffff",
+                        "on-surface": "#071e27",
+                        "inverse-primary": "#92cfee",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#bec9c9",
+                        "on-tertiary-fixed-variant": "#3e4949",
+                        "on-secondary-fixed": "#00201f",
+                        "surface": "#f3faff",
+                        "on-surface-variant": "#40484d",
+                        "on-tertiary-fixed": "#131d1e",
+                        "on-secondary-container": "#006e6c",
+                        "surface-variant": "#cfe6f2",
+                        "surface-tint": "#236580",
+                        "on-secondary-fixed-variant": "#00504e",
+                        "primary-fixed": "#c0e8ff",
+                        "secondary": "#006a68",
+                        "primary": "#00475e",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#9bd7f7",
+                        "tertiary-container": "#505a5a",
+                        "surface-container-highest": "#cfe6f2",
+                        "secondary-fixed": "#88f4f0",
+                        "secondary-fixed-dim": "#6ad8d4",
+                        "on-tertiary-container": "#c6d1d1",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #00475e 0%, #1a5f7a 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/60 dark:bg-slate-950/60 backdrop-blur-xl shadow-sm">
+<div class="grid grid-cols-3 items-center px-8 py-4 max-w-full mx-auto">
+<div class="text-xl tracking-tighter text-teal-900 dark:text-teal-50 font-headline"><a class="block w-fit" href="/"><div class="flex items-center gap-3">
+<img alt="APBIO Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujJ3z_wkeZ0C-tHPr0031kuG5BRX8sdGMF5BztkSaxV6XwEYblv7K3ASHl2mH96Qw2BV5IZhuHFpYvKCukc1FplCaloKEc6WWbb0_YXCVC9sZe1Wh9t3khM8bsq7nH1OGl9qLol6MKmjPS62Dmnf0XPoaw11mJNr7JcFl_Ee5z0HALczLOACwka3Y5rcl1nP9RMFKA5yLsvHTY1KGJsU_OFnceEUk7Hj5J8LW1B-TgSHGarNoRFX25TvZO2GZFvSTeIBiXhdxRVZE8"/>
+<div class="flex flex-col leading-tight" style="font-family: Calibri, sans-serif; color: #268397; font-weight: 400;">
+<span class="text-sm uppercase tracking-tight">Asociación Peruana</span>
+<span class="text-sm uppercase tracking-tight">de Bioingeniería</span>
+</div>
+</div></a></div>
+<div class="hidden md:flex items-center justify-center gap-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-teal-900 dark:hover:text-teal-100 transition-colors font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-sm" href="#">Institucional</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-teal-900 dark:hover:text-teal-100 transition-colors font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-sm" href="#">Actividades</a>
+<a class="text-teal-600 dark:text-teal-400 border-b-2 border-teal-600 dark:border-teal-400 pb-1 font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-sm" href="#">I+D</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-teal-900 dark:hover:text-teal-100 transition-colors font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-sm" href="#">Membresía</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-teal-900 dark:hover:text-teal-100 transition-colors font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-sm" href="#">Contacto</a>
+</div>
+<div></div>
+</div>
+</nav>
+<main class="pt-24 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<header class="mb-20">
+<div class="flex flex-col md:flex-row gap-12 items-center">
+<div class="md:w-1/2">
+<span class="text-secondary font-headline font-bold tracking-widest text-xs uppercase mb-4 block">Progreso Científico</span>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold text-on-background tracking-tighter leading-none mb-8">
+                        Investigación y <br/><span class="text-primary-container">Desarrollo</span>
+</h1>
+<p class="text-xl text-on-surface-variant leading-relaxed max-w-xl">
+                        Impulsando la evolución de la salud peruana a través de ingeniería biomédica de precisión e innovación centrada en datos.
+                    </p>
+</div>
+<div class="md:w-1/2 w-full">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl border border-surface-variant/30 aspect-video md:aspect-[4/3] lg:aspect-video group">
+<img alt="Monitorización de IoT en tiempo real en entorno clínico" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida/ADBb0uhJ8AfhXhoqXZ7RWmKs1elmVAJRCT790__8VIY2yDd_AP2HWR0XgJu0dG8uJQmDYvmbf5XQGhCXJ-K6JUAPpM4zgzejVkBcvYc4Q6rKUDN3fBQvhWOaRNxl77ennG_yZ1_mmRs6BysJx8Nv2cZb6EKm7Ed1ugjgtmoEdZtd2UNRdR8S-ORot6sN24b7PE_1l210uvy2x6NeTVHAYpHlvjhZ1C9Wd8mh_585sxEHhT30euhyym8D48U1tbDRAB2wfwFly1uxSvGBIcc"/>
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent"></div>
+</div>
+</div>
+</div>
+</header>
+<!-- Research Lines (Priority Areas) -->
+<section class="mb-24">
+<div class="flex items-center justify-between mb-10">
+<h2 class="text-3xl font-headline font-extrabold tracking-tight">Líneas de Investigación</h2>
+<div class="h-px bg-outline-variant/30 flex-grow mx-8 hidden md:block"></div>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Alineación Estratégica</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Line 1 -->
+<div class="glass-panel p-8 rounded-xl flex flex-col h-full hover:bg-white/80 transition-all duration-300">
+<div class="mb-6 flex items-center justify-between">
+<span class="material-symbols-outlined text-primary text-4xl">memory</span>
+<span class="bg-secondary-container text-on-secondary-container text-[10px] px-2 py-1 rounded-full font-bold uppercase">Prioridad Alta</span>
+</div>
+<h3 class="text-xl font-headline font-bold mb-4">Desarrollo de dispositivos</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Diseño y prototipado de equipos biomédicos y sensores avanzados para el sector salud.</p>
+<div class="mt-auto pt-4 flex gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold text-on-primary-fixed-variant uppercase">HARDWARE</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold text-on-primary-fixed-variant uppercase">PROTOTIPADO</span>
+</div>
+</div>
+<!-- Line 2 -->
+<div class="glass-panel p-8 rounded-xl flex flex-col h-full hover:bg-white/80 transition-all duration-300">
+<div class="mb-6 flex items-center justify-between">
+<span class="material-symbols-outlined text-primary text-4xl">settings_suggest</span>
+<span class="bg-surface-container-high text-on-primary-container text-[10px] px-2 py-1 rounded-full font-bold uppercase">Enfoque Central</span>
+</div>
+<h3 class="text-xl font-headline font-bold mb-4">Gestión de activos hospitalarios</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Optimización del ciclo de vida y mantenimiento preventivo de la tecnología médica en centros hospitalarios.</p>
+<div class="mt-auto pt-4 flex gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold text-on-primary-fixed-variant uppercase">INGENIERÍA CLÍNICA</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold text-on-primary-fixed-variant uppercase">GESTIÓN</span>
+</div>
+</div>
+<!-- Line 3 -->
+<div class="glass-panel p-8 rounded-xl flex flex-col h-full hover:bg-white/80 transition-all duration-300">
+<div class="mb-6 flex items-center justify-between">
+<span class="material-symbols-outlined text-primary text-4xl">psychology</span>
+<span class="bg-surface-container-high text-on-primary-container text-[10px] px-2 py-1 rounded-full font-bold uppercase">Emergente</span>
+</div>
+<h3 class="text-xl font-headline font-bold mb-4">Software e Inteligencia artificial</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Implementación de algoritmos de aprendizaje profundo para el diagnóstico asistido y análisis de datos clínicos.</p>
+<div class="mt-auto pt-4 flex gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold text-on-primary-fixed-variant uppercase">BIG DATA</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-bold text-on-primary-fixed-variant uppercase">MACHINE LEARNING</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Health Solutions Bento Grid -->
+<section class="mb-24">
+<div class="flex items-center justify-between mb-10">
+<h2 class="text-3xl font-headline font-extrabold tracking-tight">Casos de éxito</h2>
+<div class="flex gap-4">
+<button class="bg-surface-container-low p-2 rounded-lg hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-primary">filter_list</span>
+</button>
+<button class="bg-primary-container text-on-primary px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">database</span> Repositorio de Proyectos
+                    </button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Large Project -->
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl bg-primary">
+<img alt="Laboratorio biomédico" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3taOmq0gF0v8h__AGkkQjh8vlI0PVGR16I1fvbBjbaYiEAVm1yacbLuc8aiih_Ex4r-34v-39H3GjasZk7WYOvVK7OtO3598jJpRV7nH-VseLbBx0xK4OsgcXKsos_SgQ8-4mN_YdW3o4_HtzL4fEiOlajS5zOBdflGpNfW1XB0LdpJmu_c2ar2nhbVKPI_ldELSn0ISZHy5kRXoUoypKAIvVdzA5S3KyeAjCTYwNaqh-1o_eOqNUTtitoKuFUml3Gt89ZxFKhfO3"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
+<div class="relative h-full p-8 flex flex-col justify-end">
+<div class="mb-4">
+<span class="bg-secondary text-on-secondary text-[10px] px-3 py-1 rounded-full font-bold uppercase tracking-widest">Implementación Activa</span>
+</div>
+<h3 class="text-3xl font-headline font-extrabold text-white mb-4 leading-tight">Proyecto Oxígeno-Perú: <br/>Ventiladores de Bajo Costo</h3>
+<p class="text-primary-fixed text-sm max-w-md mb-6">Sistema de ventilación autónomo diseñado para respuesta de emergencia en hospitales de escasos recursos en los Andes.</p>
+<a class="inline-flex items-center text-secondary-fixed font-bold text-sm gap-2 group/link" href="#">
+                            Ver especificaciones técnicas <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Solution Card 1 -->
+<div class="md:col-span-2 glass-panel p-6 rounded-xl border-l-4 border-primary hover:bg-white/90 transition-all">
+<div class="flex justify-between items-start mb-4">
+<h4 class="font-headline font-bold text-lg">Hem-o-Scan: IA en Patología</h4>
+<span class="material-symbols-outlined text-on-surface-variant">clinical_notes</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">Herramienta de visión artificial basada en la nube para el análisis automático de frotis de sangre y detección de malaria.</p>
+<div class="flex justify-between items-center">
+<div class="text-[10px] font-bold text-secondary uppercase tracking-widest">Nivel TRL: 7</div>
+<button class="text-xs font-bold text-primary hover:underline">Documentación</button>
+</div>
+</div>
+<!-- Solution Card 2 -->
+<div class="md:col-span-1 glass-panel p-6 rounded-xl flex flex-col justify-between hover:bg-white/90 transition-all">
+<div>
+<h4 class="font-headline font-bold mb-2">SolarCool Kit</h4>
+<p class="text-xs text-on-surface-variant">Almacenamiento de vacunas con energía solar para clínicas remotas.</p>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/20 flex justify-between items-center">
+<span class="material-symbols-outlined text-primary" data-icon="wb_sunny">wb_sunny</span>
+<span class="text-[10px] font-bold">12 Sitios Activos</span>
+</div>
+</div>
+<!-- Solution Card 3 -->
+<div class="md:col-span-1 glass-panel p-6 rounded-xl flex flex-col justify-between hover:bg-white/90 transition-all">
+<div>
+<h4 class="font-headline font-bold mb-2">Safe-Water IoT</h4>
+<p class="text-xs text-on-surface-variant">Sensores de monitoreo de arsénico en tiempo real para cuencas de ríos.</p>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/20 flex justify-between items-center">
+<span class="material-symbols-outlined text-primary" data-icon="opacity">opacity</span>
+<span class="text-[10px] font-bold">Fase Piloto</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Publications Section -->
+<section class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+<div>
+<h2 class="text-3xl font-headline font-extrabold tracking-tight">Registros Científicos</h2>
+<p class="text-on-surface-variant text-sm mt-2">Artículos y tesis publicados por nuestros miembros.</p>
+</div>
+<div class="flex bg-surface-container-low p-1 rounded-lg">
+<button class="px-4 py-1 text-xs font-bold bg-white rounded shadow-sm text-primary">Recientes</button>
+<button class="px-4 py-1 text-xs font-bold text-on-surface-variant hover:text-primary">Populares</button>
+<button class="px-4 py-1 text-xs font-bold text-on-surface-variant hover:text-primary">Revista</button>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Publication 1 -->
+<div class="glass-panel p-6 rounded-xl flex flex-col md:flex-row gap-6 items-start md:items-center hover:bg-white/80 transition-colors">
+<div class="bg-surface-container p-4 rounded text-center min-w-[80px]">
+<span class="block text-xs font-bold text-primary">VOL 14</span>
+<span class="block text-xl font-headline font-extrabold">2024</span>
+</div>
+<div class="flex-grow">
+<div class="flex gap-2 mb-2">
+<span class="text-[10px] text-secondary font-bold uppercase">Journal of Bioengineering</span>
+<span class="text-[10px] text-on-surface-variant/50">•</span>
+<span class="text-[10px] text-on-surface-variant font-medium">DOI: 10.4567/apbio.2024.01</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-1">Impacto de la Altitud en el Monitoreo de Signos Vitales basado en PPG</h4>
+<p class="text-sm text-on-surface-variant italic">Ramirez, J., Huaman, L., et al.</p>
+</div>
+<div class="flex gap-3 shrink-0">
+<button class="p-2 rounded-full border border-outline-variant hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-xl">description</span>
+</button>
+<button class="p-2 rounded-full border border-outline-variant hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-xl">file_download</span>
+</button>
+</div>
+</div>
+<!-- Publication 2 -->
+<div class="glass-panel p-6 rounded-xl flex flex-col md:flex-row gap-6 items-start md:items-center hover:bg-white/80 transition-colors">
+<div class="bg-surface-container p-4 rounded text-center min-w-[80px]">
+<span class="block text-xs font-bold text-primary">BUL 09</span>
+<span class="block text-xl font-headline font-extrabold">2023</span>
+</div>
+<div class="flex-grow">
+<div class="flex gap-2 mb-2">
+<span class="text-[10px] text-secondary font-bold uppercase">Boletín Técnico</span>
+<span class="text-[10px] text-on-surface-variant/50">•</span>
+<span class="text-[10px] text-on-surface-variant font-medium">Recomendación de Política</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-1">Estándares de Interoperabilidad para Historias Clínicas Electrónicas en Perú</h4>
+<p class="text-sm text-on-surface-variant italic">Comisión de Salud Digital de APBIO</p>
+</div>
+<div class="flex gap-3 shrink-0">
+<button class="p-2 rounded-full border border-outline-variant hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-xl">description</span>
+</button>
+<button class="p-2 rounded-full border border-outline-variant hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-xl">file_download</span>
+</button>
+</div>
+</div>
+<!-- Publication 3 -->
+<div class="glass-panel p-6 rounded-xl flex flex-col md:flex-row gap-6 items-start md:items-center hover:bg-white/80 transition-colors">
+<div class="bg-surface-container p-4 rounded text-center min-w-[80px]">
+<span class="block text-xs font-bold text-primary">VOL 13</span>
+<span class="block text-xl font-headline font-extrabold">2023</span>
+</div>
+<div class="flex-grow">
+<div class="flex gap-2 mb-2">
+<span class="text-[10px] text-secondary font-bold uppercase">Journal of Bioengineering</span>
+<span class="text-[10px] text-on-surface-variant/50">•</span>
+<span class="text-[10px] text-on-surface-variant font-medium">DOI: 10.4567/apbio.2023.12</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-1">Biomateriales de Bajo Costo para el Cuidado de Heridas Crónicas: Una Revisión</h4>
+<p class="text-sm text-on-surface-variant italic">Vega, M., et al.</p>
+</div>
+<div class="flex gap-3 shrink-0">
+<button class="p-2 rounded-full border border-outline-variant hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-xl">description</span>
+</button>
+<button class="p-2 rounded-full border border-outline-variant hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined text-primary text-xl">file_download</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-8 text-center">
+<button class="text-sm font-bold text-primary border-b border-primary pb-1 hover:text-primary-container transition-colors">Explorar más (+120)</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900">
+<div class="flex justify-between items-center px-12 py-8 gap-4 max-w-full mx-auto">
+<div class="text-lg font-black text-teal-950 dark:text-white font-headline uppercase">APBIO</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-slate-500 hover:text-teal-600 transition-all font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest" href="#">Política de Privacidad</a>
+<a class="text-slate-500 hover:text-teal-600 transition-all font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest" href="#">Términos de Servicio</a>
+</div>
+<div class="text-slate-500 font-['Plus_Jakarta_Sans'] text-[10px] uppercase tracking-widest text-right">
+                © 2024 Asociación Peruana de Bioingeniería. Todos los derechos reservados.
+            </div>
+</div>
+</footer>
+</body></html>

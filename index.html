@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#004d66",
+                    "inverse-surface": "#1e333c",
+                    "surface-container": "#dbf1fe",
+                    "secondary-container": "#85f1ed",
+                    "tertiary-fixed": "#dae5e5",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#e6f6ff",
+                    "surface-dim": "#c7dde9",
+                    "primary-container": "#1a5f7a",
+                    "surface-container-high": "#d5ecf8",
+                    "error-container": "#ffdad6",
+                    "background": "#f3faff",
+                    "primary-fixed-dim": "#92cfee",
+                    "surface-bright": "#f3faff",
+                    "outline-variant": "#c0c8cd",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-fixed": "#001e2b",
+                    "outline": "#70787d",
+                    "tertiary": "#384343",
+                    "inverse-on-surface": "#dff4ff",
+                    "on-background": "#071e27",
+                    "on-error": "#ffffff",
+                    "on-surface": "#071e27",
+                    "inverse-primary": "#92cfee",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#bec9c9",
+                    "on-tertiary-fixed-variant": "#3e4949",
+                    "on-secondary-fixed": "#00201f",
+                    "surface": "#f3faff",
+                    "on-surface-variant": "#40484d",
+                    "on-tertiary-fixed": "#131d1e",
+                    "on-secondary-container": "#006e6c",
+                    "surface-variant": "#cfe6f2",
+                    "surface-tint": "#236580",
+                    "on-secondary-fixed-variant": "#00504e",
+                    "primary-fixed": "#c0e8ff",
+                    "secondary": "#006a68",
+                    "primary": "#00475e",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#9bd7f7",
+                    "tertiary-container": "#505a5a",
+                    "surface-container-highest": "#cfe6f2",
+                    "secondary-fixed": "#88f4f0",
+                    "secondary-fixed-dim": "#6ad8d4",
+                    "on-tertiary-container": "#c6d1d1",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .clinical-gradient {
+            background: linear-gradient(135deg, #00475e 0%, #1a5f7a 100%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/60 dark:bg-slate-950/60 backdrop-blur-xl shadow-sm">
+<div class="grid grid-cols-3 items-center px-8 py-4 max-w-full mx-auto">
+<div class="flex items-center gap-3">
+<img alt="APBIO Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ujJ3z_wkeZ0C-tHPr0031kuG5BRX8sdGMF5BztkSaxV6XwEYblv7K3ASHl2mH96Qw2BV5IZhuHFpYvKCukc1FplCaloKEc6WWbb0_YXCVC9sZe1Wh9t3khM8bsq7nH1OGl9qLol6MKmjPS62Dmnf0XPoaw11mJNr7JcFl_Ee5z0HALczLOACwka3Y5rcl1nP9RMFKA5yLsvHTY1KGJsU_OFnceEUk7Hj5J8LW1B-TgSHGarNoRFX25TvZO2GZFvSTeIBiXhdxRVZE8"/>
+<div class="flex flex-col leading-tight" style="font-family: 'Calibri', sans-serif; color: #268397; font-weight: 400;">
+<span class="text-sm whitespace-nowrap">Asociación Peruana</span>
+<span class="text-sm whitespace-nowrap">de Bioingeniería</span>
+</div>
+</div>
+<div class="hidden md:flex items-center justify-center gap-8">
+<a class="font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-sm text-teal-600 dark:text-teal-400 border-b-2 border-teal-600 dark:border-teal-400 pb-1" href="#">Institucional</a>
+<a class="font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-sm text-slate-600 dark:text-slate-400 hover:text-teal-900 dark:hover:text-teal-100 transition-colors" href="#">Actividades</a>
+<a class="font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-sm text-slate-600 dark:text-slate-400 hover:text-teal-900 dark:hover:text-teal-100 transition-colors" href="#">I+D</a>
+<a class="font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-sm text-slate-600 dark:text-slate-400 hover:text-teal-900 dark:hover:text-teal-100 transition-colors" href="#">Membresía</a>
+<a class="font-['Plus_Jakarta_Sans'] font-semibold tracking-tight text-sm text-slate-600 dark:text-slate-400 hover:text-teal-900 dark:hover:text-teal-100 transition-colors" href="#">Contacto</a>
+</div>
+<div class="hidden md:block"></div>
+</div>
+<div class="h-[1px] w-full bg-slate-200/20 dark:bg-slate-800/20"></div>
+</nav>
+<main class="pt-24 pb-20 px-6 md:px-12 max-w-7xl mx-auto space-y-24">
+<!-- Hero Section: Institutional Identity -->
+<header class="relative grid grid-cols-1 md:grid-cols-12 gap-12 items-center py-12">
+<div class="md:col-span-7 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold uppercase tracking-widest">
+<span class="material-symbols-outlined text-sm" data-icon="account_balance">account_balance</span>
+                    Autoridad Institucional
+                </div>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold tracking-tighter text-primary leading-[1.1]">
+                    Forjando el Futuro de la <span class="text-secondary">Bioingeniería</span> en el Perú.
+                </h1>
+<p class="text-lg text-on-surface-variant max-w-xl leading-relaxed">La Asociación Peruana de Bioingeniería (APBIO) es una sociedad sin fines de lucro orientada a la difusión de la ingeniería biomédica en el Perú, y fue creada por profesionales peruanos en el año 2011</p>
+</div>
+<div class="md:col-span-5 relative">
+<div class="absolute -inset-4 bg-primary-fixed-dim/20 blur-3xl rounded-full"></div>
+<div class="relative rounded-xl overflow-hidden shadow-2xl glass-panel p-2">
+<img alt="Precisión Científica" class="w-full aspect-square object-cover rounded-lg" data-alt="Woman in a high-tech wheelchair with biomechanical sensors and holographic interface in a modern smart home environment." src="https://lh3.googleusercontent.com/aida/ADBb0uh5bDGYsIn8-ynO6BtQSZW2JYnT7KK3nmPqOWIoonwycuVzInZ0mWMYN1K3Yicb-riJ7XDVbnpWCgU6vH6r7KpgmprA05t-M2QCZ2Y8wigeuqXFisjY2MQU__hP07jg1tdHpoep7OX3kMjD0FslAyRpjLAeIr_FsQyJ2t2nJjV8sQxPJo8tFkurzbEEfW9TV_aSqlh8Luf7JARPBW8mKD_gtxl9MAGXRNDIFvXbsCUyJda57sEiMe5rIvpucCAnrnuq7tEQLOGB-98"/>
+</div>
+</div>
+</header>
+<!-- Mission & Vision: Asymmetric Glass Cards -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+<div class="glass-panel p-8 md:p-12 rounded-xl shadow-sm space-y-6 border border-outline-variant/10">
+<div class="w-12 h-12 clinical-gradient flex items-center justify-center rounded-lg shadow-lg">
+<span class="material-symbols-outlined text-on-primary" data-icon="target">target</span>
+</div>
+<h2 class="text-3xl font-headline font-bold text-primary tracking-tight">Misión</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg">Somos una asociación que une a los profesionales de la ingeniería biomédica en el Perú, con el fin de fomentar su desarrollo científico, académico y profesional. Promovemos la investigación aplicada, la innovación y el uso seguro de la tecnología clínica, orientándonos prioritariamente a proponer soluciones técnicas a los problemas del sector salud.</p>
+</div>
+<div class="md:mt-16 glass-panel p-8 md:p-12 rounded-xl shadow-sm space-y-6 border border-outline-variant/10">
+<div class="w-12 h-12 clinical-gradient flex items-center justify-center rounded-lg shadow-lg">
+<span class="material-symbols-outlined text-on-primary" data-icon="visibility">visibility</span>
+</div>
+<h2 class="text-3xl font-headline font-bold text-primary tracking-tight">Visión</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg">Ser la entidad líder y referente en Ingeniería Biomédica en el Perú, reconocida por su impacto en la mejora del sistema de salud, la defensa de la seguridad del paciente, la excelencia académica y la articulación multisectorial, posicionando a la bioingeniería como un pilar estratégico para el desarrollo nacional y la equidad en salud.</p>
+</div>
+</section>
+<!-- Organizational Structure: Bento Grid Style -->
+<section class="space-y-12">
+<div class="space-y-4">
+<h2 class="text-4xl font-headline font-extrabold text-primary tracking-tight">Estructura Organizacional</h2>
+<div class="h-1 w-24 clinical-gradient rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- General Assembly -->
+<div class="md:col-span-2 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between group hover:bg-surface-container transition-colors duration-500">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="groups">groups</span>
+<h3 class="text-2xl font-headline font-bold text-primary">Asamblea General</h3>
+</div>
+<p class="text-on-surface-variant leading-relaxed max-w-2xl">
+                            El órgano de gobierno supremo de la APBIO, compuesto por todos los miembros activos. Define la dirección estratégica, aprueba los informes financieros y elige el liderazgo que representa nuestra visión científica colectiva.
+                        </p>
+</div>
+<div class="mt-8 flex gap-2 overflow-hidden">
+<div class="px-4 py-2 bg-white/50 rounded-full text-xs font-semibold uppercase tracking-wider text-primary border border-outline-variant/10">Toma de Decisiones</div>
+<div class="px-4 py-2 bg-white/50 rounded-full text-xs font-semibold uppercase tracking-wider text-primary border border-outline-variant/10">Transparencia</div>
+<div class="px-4 py-2 bg-white/50 rounded-full text-xs font-semibold uppercase tracking-wider text-primary border border-outline-variant/10">Democracia</div>
+</div>
+</div>
+<!-- Board of Directors -->
+<div class="bg-primary text-on-primary rounded-xl p-8 relative overflow-hidden flex flex-col justify-between">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-on-primary-container/20 rounded-full blur-3xl"></div>
+<div class="space-y-4 relative z-10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-on-primary-container text-3xl" data-icon="account_tree">account_tree</span>
+<h3 class="text-2xl font-headline font-bold">Consejo Directivo</h3>
+</div>
+<p class="text-on-primary-container leading-relaxed">Es el órgano de dirección de la asociación que actúa en representación de la asociación.</p>
+</div>
+<ul class="space-y-3 relative z-10 text-sm font-medium"><li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Presidente</li><li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Vicepresidente</li><li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Secretario General</li><li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Tesorero</li></ul>
+</div>
+<!-- Specialized Committees -->
+<div class="md:col-span-3 grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="md:col-span-4 bg-surface-container-high rounded-xl p-6">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+<div class="space-y-2">
+<h3 class="text-xl font-headline font-bold text-primary">Comités Especializados</h3>
+<p class="text-on-surface-variant text-sm">Unidades técnicas enfocadas en dominios de investigación específicos y supervisión ética.</p>
+</div>
+<div class="flex flex-wrap gap-4">
+<div class="glass-panel px-6 py-4 rounded-xl border border-outline-variant/20 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="biotech">biotech</span>
+<span class="font-semibold text-primary">Ética en Bioingeniería</span>
+</div>
+<div class="glass-panel px-6 py-4 rounded-xl border border-outline-variant/20 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="science">science</span>
+<span class="font-semibold text-primary">Revisión Científica</span>
+</div>
+<div class="glass-panel px-6 py-4 rounded-xl border border-outline-variant/20 flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="school">school</span>
+<span class="font-semibold text-primary">Educación y Difusión</span>
+</div>
+<div class="glass-panel px-6 py-4 rounded-xl border border-outline-variant/20 flex items-center gap-3"><span class="material-symbols-outlined text-secondary">handshake</span><span class="font-semibold text-primary">Relaciones Institucionales</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Documents: Precision & Utility -->
+<section class="space-y-12">
+<div class="flex items-end justify-between border-b border-outline-variant/30 pb-6">
+<div class="space-y-2">
+<h2 class="text-4xl font-headline font-extrabold text-primary tracking-tight">Documentos Técnicos</h2>
+<p class="text-on-surface-variant">Marco legal y reglamentos de gobernanza científica.</p>
+</div>
+<div class="hidden md:block">
+<span class="text-xs font-label uppercase tracking-widest text-outline">Última actualización: Mayo 2024</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Doc 1 -->
+<div class="group p-6 bg-surface-container-lowest border border-outline-variant/10 rounded-xl hover:border-secondary transition-all duration-300 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+</div>
+<div>
+<h4 class="font-bold text-primary">Estatutos Institucionales</h4>
+<p class="text-xs text-on-surface-variant font-label">PDF • 4.2 MB • Estructura Legal</p>
+</div>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold text-sm hover:underline">
+                        Descargar
+                        <span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</button>
+</div>
+<!-- Doc 2 -->
+<div class="group p-6 bg-surface-container-lowest border border-outline-variant/10 rounded-xl hover:border-secondary transition-all duration-300 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+</div>
+<div>
+<h4 class="font-bold text-primary">Reglamento Interno</h4>
+<p class="text-xs text-on-surface-variant font-label">PDF • 2.8 MB • Gobernanza</p>
+</div>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold text-sm hover:underline">
+                        Descargar
+                        <span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</button>
+</div>
+<!-- Doc 3 -->
+<div class="group p-6 bg-surface-container-lowest border border-outline-variant/10 rounded-xl hover:border-secondary transition-all duration-300 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+</div>
+<div>
+<h4 class="font-bold text-primary">Código de Ética</h4>
+<p class="text-xs text-on-surface-variant font-label">PDF • 1.5 MB • Ética de Investigación</p>
+</div>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold text-sm hover:underline">
+                        Descargar
+                        <span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</button>
+</div>
+<!-- Doc 4 -->
+<div class="group p-6 bg-surface-container-lowest border border-outline-variant/10 rounded-xl hover:border-secondary transition-all duration-300 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="license">license</span>
+</div>
+<div>
+<h4 class="font-bold text-primary">Protocolos de Membresía</h4>
+<p class="text-xs text-on-surface-variant font-label">PDF • 3.1 MB • Procedimientos</p>
+</div>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold text-sm hover:underline">
+                        Descargar
+                        <span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Section -->
+<footer class="w-full bg-[#f6f7f8] py-12 px-8 border-t border-slate-200">
+<div class="max-w-[1881px] mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-8">
+<!-- Left: Brand Logo -->
+<div class="flex justify-start">
+<span class="text-xl font-bold tracking-tighter text-[#004d66] font-display">APBIO</span>
+</div>
+<!-- Center: Navigation Links -->
+<div class="flex justify-center gap-10">
+<a class="text-[11px] font-semibold tracking-[0.05em] text-slate-500 hover:text-primary transition-colors font-display uppercase" href="#">Política de Privacidad</a>
+<a class="text-[11px] font-semibold tracking-[0.05em] text-slate-500 hover:text-primary transition-colors font-display uppercase" href="#">Términos de Servicio</a>
+</div>
+<!-- Right: Copyright Text -->
+<div class="flex justify-end">
+<p class="text-[10px] font-semibold tracking-[0.05em] text-slate-400 font-display uppercase">
+        © 2024 Asociación Peruana de Bioingeniería. Todos los derechos reservados.
+      </p>
+</div>
+</div>
+</footer>
+</body></html>
